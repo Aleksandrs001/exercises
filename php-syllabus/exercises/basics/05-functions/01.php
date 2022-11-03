@@ -1,6 +1,5 @@
 <?php
 
-
 function message($word)
 {
     echo $word . " codelex";
@@ -8,5 +7,3 @@ function message($word)
 
 message("hello");
 echo PHP_EOL;
-
-?>

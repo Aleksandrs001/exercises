@@ -5,6 +5,3 @@ for ($i = 0; $i < count($numbers2); $i++) {
     echo $numbers2[$i] . PHP_EOL;
 }
 echo PHP_EOL;
-
-
-?>

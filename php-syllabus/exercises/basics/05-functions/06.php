@@ -11,5 +11,3 @@ array_walk($numbers,
         }
     }
 );
-
-?>

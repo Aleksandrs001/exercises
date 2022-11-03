@@ -25,5 +25,5 @@ while ($min < $max) {
             $min++;
         }
     }
-    echo " " . PHP_EOL;
+    echo " \n" ;
 }

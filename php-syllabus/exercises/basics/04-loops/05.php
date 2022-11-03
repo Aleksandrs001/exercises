@@ -9,5 +9,3 @@ $persons =
 foreach ($persons as $data) {
     echo ($data) . PHP_EOL;
 }
-
-?>

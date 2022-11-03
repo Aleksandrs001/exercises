@@ -7,4 +7,3 @@ if ($number == $string) {
 }
 echo PHP_EOL;
 
-?>

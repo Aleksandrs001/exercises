@@ -1,6 +1,5 @@
 <?php
 
-
 $persons = new stdClass();
 $persons->name = "Alice";
 $persons->surname = "Armstrong";
@@ -16,5 +15,3 @@ function validating(stdClass $persons): string
 }
 
 echo validating($persons);
-
-?>

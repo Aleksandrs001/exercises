@@ -8,4 +8,3 @@ if ($int >= $y && $int <= $z) {
     echo "correct";
     echo PHP_EOL;
 }
-?>

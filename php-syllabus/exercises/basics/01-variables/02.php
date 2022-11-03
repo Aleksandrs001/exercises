@@ -14,4 +14,3 @@ echo PHP_EOL;
 echo $string;
 echo PHP_EOL;
 
-?>

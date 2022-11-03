@@ -1,6 +1,5 @@
 <?php
 
-
 $persons =
     [
         (object)
@@ -21,5 +20,3 @@ foreach ($persons as $person) {
     echo validating($person);
 }
 echo PHP_EOL;
-
-?>

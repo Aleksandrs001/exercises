@@ -1,6 +1,5 @@
 <?php
 
-
 function numbers($a, $b)
 {
 
@@ -9,5 +8,3 @@ function numbers($a, $b)
 
 numbers(10, 5);
 echo PHP_EOL;
-
-?>

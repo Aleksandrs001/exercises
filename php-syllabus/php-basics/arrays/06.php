@@ -1,10 +1,10 @@
 <?php
 
-$answer = "again";
-$answerA = "again";
 $words = ["leviathan", "hello", "car", "dog", "mouse", "chopper"];
 
-while ($answerA == $answer)
+$answer = "again";
+
+while ($answer == "again")
 {
     $word = $words[array_rand($words)];
     $letters = str_split($word);
@@ -43,12 +43,11 @@ while ($answerA == $answer)
     echo in_array("-", $correctWord) ? PHP_EOL . "You lose;(" . PHP_EOL . "It was a word: " . $word : "YOU GOT IT!";
     echo PHP_EOL;
     $answer = readline('Play "again" or "quit"? ');
-    if (!$answer == $answerA) {
+    if (!$answer == "again") {
         break;
     }
 }
 echo PHP_EOL;
 
-?>
 
 

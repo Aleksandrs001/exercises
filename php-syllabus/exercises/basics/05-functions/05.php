@@ -24,5 +24,3 @@ function checkFruits($fruits, $shipCost): string
 foreach ($fruits as $eachFruit) {
     echo checkFruits($eachFruit, $shipCost);
 }
-
-?>

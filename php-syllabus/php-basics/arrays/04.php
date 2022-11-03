@@ -18,4 +18,4 @@ foreach ($second as $secondTest) {
 }
 echo PHP_EOL;
 
-?>
+

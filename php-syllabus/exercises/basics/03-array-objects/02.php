@@ -8,15 +8,15 @@ $person =
 
 echo $person["name"];
 echo PHP_EOL;
-var_dump($person["name"]);
+//var_dump($person["name"]);
 echo PHP_EOL;
 echo $person["surname"];
 echo PHP_EOL;
-var_dump($person["surname"]);
+//var_dump($person["surname"]);
 echo PHP_EOL;
 echo $person["age"];
 echo PHP_EOL;
-var_dump($person["age"]);
+//var_dump($person["age"]);
 echo PHP_EOL;
-print_r($person);
+//print_r($person);
 echo PHP_EOL;

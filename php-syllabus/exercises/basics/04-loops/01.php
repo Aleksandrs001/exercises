@@ -5,4 +5,3 @@ foreach ($numbers as $number) {
     echo $number . PHP_EOL;
 }
 echo PHP_EOL;
-

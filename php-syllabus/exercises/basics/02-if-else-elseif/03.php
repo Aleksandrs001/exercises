@@ -7,5 +7,3 @@ if ($string == $stringB) {
     echo "world";
 }
 echo PHP_EOL;
-
-?>

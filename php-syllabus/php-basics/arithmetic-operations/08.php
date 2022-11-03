@@ -30,15 +30,15 @@ function dataFromObjects(string $names, int $payInHour, int $weekHours): string
     $paymentAfterHours = 0;
 
     if ($payInHour < $stateMinPay) {
-        $result = "Error, $names  base pay smaller than state pay" . PHP_EOL;
+        $result = "Error, $names  base pay smaller than state pay\n";
     } else if ($weekHours > $maxHoursPerWeek) {
-        $result = "Error, $names  too much hours per week" . PHP_EOL;
+        $result = "Error, $names  too much hours per week\n";
     } else {
         if ($weekHours > $baseHours) {
             $paymentAfterHours = ($weekHours - $baseHours) * $stateOverTimePay;
         }
         $earnings = $payInHour * $baseHours + $paymentAfterHours;
-        $result = $names . ", total pay: {$earnings}$" . PHP_EOL;
+        $result = $names . ", total pay: {$earnings}$\n";
     }
     return $result;
 }
@@ -46,7 +46,5 @@ function dataFromObjects(string $names, int $payInHour, int $weekHours): string
 echo payStatement($employee1);
 echo payStatement($employee2);
 echo payStatement($employee3);
-
-?>
 
 

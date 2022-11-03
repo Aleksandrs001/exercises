@@ -8,5 +8,3 @@ if (($min <= $numberEx2) && ($numberEx2 <= $max)) {
 }
 
 echo PHP_EOL;
-
-?>

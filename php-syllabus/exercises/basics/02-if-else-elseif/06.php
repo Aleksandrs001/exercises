@@ -14,4 +14,3 @@ switch ($plateNumber) {
 
 }
 echo PHP_EOL;
-?>

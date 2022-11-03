@@ -24,5 +24,3 @@ echo PHP_EOL;
 testNumbers($number = 45);
 testNumbers($number = 50);
 testNumbers($number = 150);
-
-?>

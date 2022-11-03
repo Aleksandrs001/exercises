@@ -2,6 +2,7 @@
 
 $fromNumber = 1;
 $tooNumber = 100;
+
 $rangeOfNumbers = range($fromNumber, $tooNumber);
 $sumOfNumbers = array_sum($rangeOfNumbers);
 $averageNumber = $sumOfNumbers / count($rangeOfNumbers);

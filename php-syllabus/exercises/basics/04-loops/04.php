@@ -8,5 +8,3 @@ for ($i = 0; $i <= count($numbers->int); $i++) {
     }
 }
 echo PHP_EOL;
-
-?>

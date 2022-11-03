@@ -1,5 +1,6 @@
 <?php
 
+
 $numbers = [1, 2, 3, 4.7, '5'];
 
 array_walk($numbers,

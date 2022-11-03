@@ -1,6 +1,5 @@
 <?php
 
-
 $first = array(45, 87, 39, 32, 93, 86, 12, 44, 75, 50);
 $second = $first;
 $replace = array(9 => -7);

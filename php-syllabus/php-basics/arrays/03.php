@@ -17,4 +17,5 @@ if (in_array($enteredNum, $numbers)) {
 } else
     echo "This number NOT in number array." . PHP_EOL;
 
+
 ?>

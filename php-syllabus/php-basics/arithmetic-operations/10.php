@@ -9,11 +9,12 @@ $selection = readline("Geometry Calculator\n" .
 echo PHP_EOL;
 
 if ($selection == 1) {
-    echo phpphpMath::Circle() . PHP_EOL;
+
+    echo Math::Circle() . PHP_EOL;
 } elseif ($selection == 2) {
-    echo phpphpMath::Rectangle() . PHP_EOL;
+    echo Math::Rectangle() . PHP_EOL;
 } elseif ($selection == 3) {
-    echo phpphpMath::Triangle() . PHP_EOL;
+    echo Math::Triangle() . PHP_EOL;
 } elseif ($selection == 4) {
     echo "Quit\n";
 } else {
@@ -54,4 +55,3 @@ class Math
         return "Area of Triangle : " . $base * $height * 0.5 . PHP_EOL;
     }
 }
-?>

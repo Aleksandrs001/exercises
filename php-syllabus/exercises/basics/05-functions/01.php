@@ -1,5 +1,6 @@
 <?php
 
+
 function message($word)
 {
     echo $word . " codelex";

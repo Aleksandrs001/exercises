@@ -1,6 +1,5 @@
 <?php
 
-
 //todo print if number is positive or negative
 
 $number= readline("Enter number : ");
@@ -13,4 +12,4 @@ elseif ($number <0){
 elseif ($number==0){
     echo "Zero".PHP_EOL;
 }
-?>
+

@@ -12,5 +12,3 @@ function checkOddEven($number)
 checkOddEven(5);
 checkOddEven(4);
 echo PHP_EOL;
-
-?>

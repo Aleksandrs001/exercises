@@ -1,5 +1,6 @@
 <?php
 
+
 $fruits =
     [
         (object)["fruit" => "Coconut", "weight" => 25],

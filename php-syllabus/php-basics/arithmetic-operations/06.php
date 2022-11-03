@@ -27,5 +27,3 @@ while ($min < $max) {
     }
     echo " " . PHP_EOL;
 }
-
-?>

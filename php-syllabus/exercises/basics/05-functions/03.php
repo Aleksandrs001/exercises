@@ -1,5 +1,6 @@
 <?php
 
+
 $persons = new stdClass();
 $persons->name = "Alice";
 $persons->surname = "Armstrong";

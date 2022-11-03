@@ -7,7 +7,4 @@ echo "Input of 3rd number: $numbers[2]". PHP_EOL;
 
 //todo print the largest number
 
-
 echo "MAX number is: ".max($numbers).PHP_EOL;
-
-?>

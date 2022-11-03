@@ -40,7 +40,6 @@ echo PHP_EOL;
 
 //todo
 echo "Sorted string array: ";
-
 sort($words, SORT_STRING);
 foreach ($words as $sortedWords) {
     echo "$sortedWords ";

@@ -15,12 +15,9 @@ function numbers($first, $second): bool
 }
 
 echo PHP_EOL;
+numbers($first=5, $second=10);
+numbers($first=25, $second=10);
+numbers($first=15, $second=5);
+numbers($first=5, $second=15);
 
-numbers(5, 10);
-numbers(25, 10);
-numbers(15, 5);
-numbers(5, 15);
-//var_dump(numbers(5, 10));
-//var_dump(numbers(5,5));
-?>
 

@@ -2,17 +2,15 @@
 
 $answer = "again";
 $answerA = "again";
+$words = ["leviathan", "hello", "car", "dog", "mouse", "chopper"];
 
-while ($answerA == $answer) {
-    $words = ["leviathan", "hello", "car", "dog", "mouse", "chopper"];
-
+while ($answerA == $answer)
+{
     $word = $words[array_rand($words)];
     $letters = str_split($word);
     $correctWord = str_split(str_repeat("-", strlen($word)));
-
     $misses = "";
     $guess = "";
-
     echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-";
     echo PHP_EOL;
     echo "Word:   " . implode("", $correctWord);

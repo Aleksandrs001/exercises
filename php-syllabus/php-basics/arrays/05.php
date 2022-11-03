@@ -1,19 +1,15 @@
-
-
 <?php
 
 $data = [
-    ["row" => 0, "column" => 0],["row" => 1, "column" => 0],["row" => 2, "column" => 0],
-    ["row" => 0, "column" => 1],["row" => 1, "column" => 1],["row" => 2, "column" => 1],
-    ["row" => 0, "column" => 2],["row" => 1, "column" => 2],["row" => 2, "column" => 2]
+    ["row" => 0, "column" => 0], ["row" => 1, "column" => 0], ["row" => 2, "column" => 0],
+    ["row" => 0, "column" => 1], ["row" => 1, "column" => 1], ["row" => 2, "column" => 1],
+    ["row" => 0, "column" => 2], ["row" => 1, "column" => 2], ["row" => 2, "column" => 2]
 ];
 
 $b = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 
-
-
-function display_board($b) {
-
+function display_board($b)
+{
 
     echo " $b[0] | $b[1] | $b[2] \n ";
     echo "---+---+---\n";
@@ -25,25 +21,15 @@ function display_board($b) {
 
 $playerOne = "X";
 $playerTwo = "O";
-
 $turn = $playerOne;
-
-
 display_board($b);
 
-
-for ($i = 0; $i < 9; $i++ ) {
-
-
-
+for ($i = 0; $i < 9; $i++)
+{
     do {
-
         $inputOne = (int)readline("$turn Turn| Enter Row: ");
         $inputTwo = (int)readline("$turn Turn| Enter Column: ");
-
         $input = [array("row" => $inputOne, "column" => $inputTwo)];
-
-
         $x = "end";
 
         if ($input[0] == $data[0]) {
@@ -91,9 +77,12 @@ for ($i = 0; $i < 9; $i++ ) {
                 echo "Wrong Input\n";
                 $x = "repeat";
             } else $b[8] = $turn;
-        } else {$x = "repeat"; echo "Wrong Input\n";}
+        } else {
+            $x = "repeat";
+            echo "Wrong Input\n";
+        }
 
-        echo PHP_EOL;
+        echo "\n";
 
         display_board($b);
 
@@ -150,5 +139,5 @@ for ($i = 0; $i < 9; $i++ ) {
     if ($i == 8) {
         echo "Tie!\n";
     }
-
 }
+?>

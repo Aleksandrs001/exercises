@@ -25,5 +25,3 @@ while ($maxGuesses > $guess) {
 
     $guess++;
 }
-
-?>

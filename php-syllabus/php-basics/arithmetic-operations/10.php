@@ -9,12 +9,17 @@ $selection = readline("Geometry Calculator\n" .
 echo PHP_EOL;
 
 if ($selection == 1) {
-
     echo Math::Circle() . PHP_EOL;
+
+
 } elseif ($selection == 2) {
     echo Math::Rectangle() . PHP_EOL;
+
+
 } elseif ($selection == 3) {
     echo Math::Triangle() . PHP_EOL;
+
+
 } elseif ($selection == 4) {
     echo "Quit\n";
 } else {

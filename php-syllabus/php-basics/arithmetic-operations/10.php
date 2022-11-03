@@ -1,6 +1,6 @@
 <?php
 
-$selection = readline("Geometry Calculator\n" .
+$selection =(int) readline("Geometry Calculator\n" .
     "1. Calculate the Area of a Circle\n" .
     "2. Calculate the Area of a Rectangle\n" .
     "3. Calculate the Area of a Triangle\n" .
@@ -9,16 +9,18 @@ $selection = readline("Geometry Calculator\n" .
 echo PHP_EOL;
 
 if ($selection == 1) {
-    echo Math::Circle() . PHP_EOL;
-
+    $radius=(int) readline("Radius : ");
+    echo "Area Of Circle is : ". circle($radius) ."\n";
 
 } elseif ($selection == 2) {
-    echo Math::Rectangle() . PHP_EOL;
-
+    $length =(int) readline("Enter length : ");
+    $width =(int) readline("Enter width: ");
+    echo "Area of Rectangle is : " . rectangle($length, $width) . "\n";
 
 } elseif ($selection == 3) {
-    echo Math::Triangle() . PHP_EOL;
-
+    $base =(int) readline("Base : ");
+    $height =(int) readline("Height : ");
+    echo "Area of Triangle : " .triangle($base , $height) . "\n";
 
 } elseif ($selection == 4) {
     echo "Quit\n";
@@ -26,37 +28,15 @@ if ($selection == 1) {
     echo "Error- entered is number out of range\n";
 }
 
-class Math
+function circle(int $radius): int
 {
-    public static function Circle()
-    {
-        $radius = readline("Radius : ");
-        if ($radius < 0) {
-            echo "Error: Entered number is negative" . PHP_EOL;
-            exit;
-        }
-        return "Area Of Circle is : " . $radius * pi() * 2 . PHP_EOL;
-    }
-
-    public static function Rectangle()
-    {
-        $length = readline("Enter length : ");
-        $width = readline("Enter width: ");
-        if ($length < 0 || $width < 0) {
-            echo "Error: Entered number is negative" . PHP_EOL;
-            exit;
-        }
-        return "Area of Rectangle is : " . $length * $width . PHP_EOL;
-    }
-
-    public static function Triangle()
-    {
-        $base = readline("Base : ");
-        $height = readline("Height : ");
-        if ($base < 0 || $height < 0) {
-            echo "Error: Entered number is negative" . PHP_EOL;
-            exit;
-        }
-        return "Area of Triangle : " . $base * $height * 0.5 . PHP_EOL;
-    }
+    return  $radius * pi() * 2;
+}
+function rectangle(int $length, int $width): int
+{
+    return $length * $width;
+}
+function triangle(int $base , int  $height): float
+{
+    return  $base * $height * 0.5 ;
 }

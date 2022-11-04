@@ -68,7 +68,7 @@ while(true) {
 
         foreach ($combination as $position){
             [$x,$y]= $position;
-            if($board[$x][$y] !==$currentPlayer){
+            if($board[$row][$column] !==$currentPlayer){
                 break;
             }
             $conditionCounter++;

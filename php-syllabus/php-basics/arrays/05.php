@@ -14,7 +14,7 @@ $combinations=[
     [[0,0],[1,0],[0,2]],
     [[1,0],[1,1],[2,1]],
     [[0,2],[1,2],[2,2]],
-    //Diogonal
+    //Diagonal
     [[0,0],[1,1],[2,2]],
     [[0,2],[1,1],[2,0]],
 
@@ -44,18 +44,18 @@ $turns = 0;
 while(true) {
     $turns++;
 
-    $userChoice = readline("\n {$currentPlayer}, choose your location (Row, column) (include )");
-    [$x, $y]= explode(" ", $userChoice);
+    $userChoice = readline(" $currentPlayer, choose your location (Row, column) (include )\n");
+    [$row, $column]= explode(" ", $userChoice);
 
-    if ($x == null || $y == null){
+    if ($row == null || $column == null){
         displayBoard($board);
         echo "invalid input";
         continue;
     }
 
-    if ($board[$x][$y]==" "){
-        $board[$x][$y]==$currentPlayer;
-    }else{
+    if ($board[$row][$column]==" "){
+        $board[$row][$column]=$currentPlayer;
+    } else {
         displayBoard($board);
         echo "Cell is already filled\n";
         continue;
@@ -75,7 +75,7 @@ while(true) {
         }
 
         if($conditionCounter==3){
-            echo "Player {$currentPlayer} wins!\n";
+            echo "Player $currentPlayer wins!\n";
         }
     }
     $isTie=false;

@@ -19,7 +19,10 @@ $gameSym=["#","@","#","%","*"];
 $cost=10;
 $win=0;
 $winCoff=1;
-
+function thiefMoney(int $totalOnGame, int $cost ,int $win,float $winCoff): float
+{
+    return $totalOnGame - $cost +($win*$winCoff);
+}
 echo "One spin cost $cost$\n";
 
 $totalOnGame=(int) readline("Place money on balance : ");
@@ -27,10 +30,7 @@ $totalOnGame=(int) readline("Place money on balance : ");
 
 echo PHP_EOL;
 
-function thiefMoney(int $totalOnGame, int $cost ,int $win,float $winCoff): float
-{
-    return $totalOnGame - $cost +($win*$winCoff);
-}
+
 if ($totalOnGame<=39) {
 exit("Your balance is too Low.\n");
 }
@@ -73,7 +73,7 @@ displayBoard($b);
             $b[11] = $gameSym[$rS2];
             echo "Fourth Spin -$cost$\n";
             $totalOnGame-=thiefMoney($totalOnGame, $cost=40, $win,$winCoff);
-            echo "Total balance:$totalOnGame$ ".PHP_EOL;
+
 
         }
         displayBoard($b);
@@ -87,7 +87,7 @@ displayBoard($b);
         $b[0] === $b[1] && $b[0] === $b[2] && $b[1] === $b[2] && $b[1] === $b[3]
     ){
         echo "winner UP Center Down 4x per line line SUPER\n";
-        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        $totalOnGame += thiefMoney($totalOnGame,$cost=0, $win=50,$winCoff=1.33);
         echo"Total money: $totalOnGame$";
     }
     // 4 in string
@@ -97,7 +97,7 @@ displayBoard($b);
         $b[8] === $b[9] && $b[8] === $b[10] && $b[9] === $b[10] && $b[9] === $b[11]
     ) {
         echo "winner 4x per line SUPER\n";
-        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        $totalOnGame += thiefMoney($totalOnGame,$cost=0, $win=50,$winCoff=1.33);
         echo"Total money: $totalOnGame$";
     }
         // 3 in string
@@ -106,7 +106,7 @@ displayBoard($b);
         $b[8] === $b[9] && $b[8] === $b[10] || $b[9] === $b[10] && $b[9] === $b[11]
     ) {
         echo "winner 3x per line\n";
-        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        $totalOnGame += thiefMoney($totalOnGame,$cost=0, $win=50,$winCoff=1.33);
         echo"Total money: $totalOnGame$";
 
     }else

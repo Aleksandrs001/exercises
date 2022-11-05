@@ -44,12 +44,8 @@ displayBoard($b);
         $rS2 = array_rand($gameSym);
 
         $output = $input++ . readline("<<< enter >>>");
-        if($totalOnGame<=5) {
-            $input = 6;
-            echo "Your balance is to low!\n";
-            die;
-        }
-        elseif ($input == 1) {
+
+        if ($input == 1) {
             $b[0] = $gameSym[$rS0];
             $b[4] = $gameSym[$rS1];
             $b[8] = $gameSym[$rS2];

@@ -58,15 +58,16 @@ displayBoard($b);
             $b[0] = $gameSym[$rS0];
             $b[4] = $gameSym[$rS1];
             $b[8] = $gameSym[$rS2];
-            $a1= thiefMoney($totalOnGame, $cost, $win,$winCoff);
+            $a1+= thiefMoney($totalOnGame, $cost, $win,$winCoff);
             echo "First Spin  -$cost$\n";
             echo "Total balance:$a1$ ".PHP_EOL;
+
 
         } elseif ($input == 2) {
             $b[1] = $gameSym[$rS0];
             $b[5] = $gameSym[$rS1];
             $b[9] = $gameSym[$rS2];
-            $b2=  thiefMoney($a1, $cost, $win,$winCoff);
+            $b2+=  thiefMoney($a1, $cost, $win,$winCoff);
             $secondRound= "Second Spin -$cost$\n";
             echo "Total balance:$b2$ ".PHP_EOL;
 
@@ -74,7 +75,7 @@ displayBoard($b);
             $b[2] = $gameSym[$rS0];
             $b[6] = $gameSym[$rS1];
             $b[10] = $gameSym[$rS2];
-            $c3= thiefMoney($b2, $cost, $win,$winCoff);
+            $c3+= thiefMoney($b2, $cost, $win,$winCoff);
             echo "Third Spin  -$cost$\n";
             echo "Total balance: $c3$ ".PHP_EOL;
 
@@ -82,7 +83,7 @@ displayBoard($b);
             $b[3] = $gameSym[$rS0];
             $b[7] = $gameSym[$rS1];
             $b[11] = $gameSym[$rS2];
-            $d4=thiefMoney($c3, $cost, $win,$winCoff);
+            $d4+=thiefMoney($c3, $cost, $win,$winCoff);
             echo "Fourth Spin -$cost$\n";
             echo "Total balance:$d4$ ".PHP_EOL;
 
@@ -118,7 +119,7 @@ displayBoard($b);
         echo"Total money: ".thiefMoney($d4,$cost=0, $win=30,$winCoff=1.2)."$";
     }else
     {
-        echo"Total money: ".thiefMoney($d4,$cost=0, $win=1,$winCoff=1)."$";
+        echo"Total money: ".thiefMoney($d4,$cost=0, $win=1,$winCoff)."$";
     }
 
     //much more win position!!!need time=(

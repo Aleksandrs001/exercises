@@ -17,18 +17,13 @@ function displayBoard($b)
 $gameSym=["#","@","#","%","*"];
 
 $cost=10;
-$a1=0;
-$b2=0;
-$c3=0;
-$d4=0;
 $win=0;
 $winCoff=1;
 
 echo "One spin cost $cost$\n";
 
-$moneyOnCount=(int) readline("Place money on balance : ");
+$totalOnGame=(int) readline("Place money on balance : ");
 
-$totalOnGame= $moneyOnCount;
 
 echo PHP_EOL;
 
@@ -58,34 +53,27 @@ displayBoard($b);
             $b[0] = $gameSym[$rS0];
             $b[4] = $gameSym[$rS1];
             $b[8] = $gameSym[$rS2];
-            $a1+= thiefMoney($totalOnGame, $cost, $win,$winCoff);
             echo "First Spin  -$cost$\n";
-            echo "Total balance:$a1$ ".PHP_EOL;
-
 
         } elseif ($input == 2) {
             $b[1] = $gameSym[$rS0];
             $b[5] = $gameSym[$rS1];
             $b[9] = $gameSym[$rS2];
-            $b2+=  thiefMoney($a1, $cost, $win,$winCoff);
-            $secondRound= "Second Spin -$cost$\n";
-            echo "Total balance:$b2$ ".PHP_EOL;
+            echo "Second Spin -$cost$\n";
 
         } elseif ($input == 3) {
             $b[2] = $gameSym[$rS0];
             $b[6] = $gameSym[$rS1];
             $b[10] = $gameSym[$rS2];
-            $c3+= thiefMoney($b2, $cost, $win,$winCoff);
             echo "Third Spin  -$cost$\n";
-            echo "Total balance: $c3$ ".PHP_EOL;
 
         } elseif ($input == 4) {
             $b[3] = $gameSym[$rS0];
             $b[7] = $gameSym[$rS1];
             $b[11] = $gameSym[$rS2];
-            $d4+=thiefMoney($c3, $cost, $win,$winCoff);
             echo "Fourth Spin -$cost$\n";
-            echo "Total balance:$d4$ ".PHP_EOL;
+            $totalOnGame-=thiefMoney($totalOnGame, $cost=40, $win,$winCoff);
+            echo "Total balance:$totalOnGame$ ".PHP_EOL;
 
         }
         displayBoard($b);
@@ -99,7 +87,8 @@ displayBoard($b);
         $b[0] === $b[1] && $b[0] === $b[2] && $b[1] === $b[2] && $b[1] === $b[3]
     ){
         echo "winner UP Center Down 4x per line line SUPER\n";
-        echo"Total money: ". thiefMoney($d4,$cost=0, $win=500,$winCoff=5)."$";
+        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        echo"Total money: $totalOnGame$";
     }
     // 4 in string
     elseif (
@@ -108,7 +97,8 @@ displayBoard($b);
         $b[8] === $b[9] && $b[8] === $b[10] && $b[9] === $b[10] && $b[9] === $b[11]
     ) {
         echo "winner 4x per line SUPER\n";
-        echo"Total money: ".thiefMoney($d4,$cost=0, $win=50,$winCoff=1.33)."$";
+        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        echo"Total money: $totalOnGame$";
     }
         // 3 in string
     elseif ($b[0] === $b[1] && $b[0] === $b[2] || $b[1] === $b[2] && $b[1] === $b[3] ||
@@ -116,10 +106,14 @@ displayBoard($b);
         $b[8] === $b[9] && $b[8] === $b[10] || $b[9] === $b[10] && $b[9] === $b[11]
     ) {
         echo "winner 3x per line\n";
-        echo"Total money: ".thiefMoney($d4,$cost=0, $win=30,$winCoff=1.2)."$";
+        $totalOnGame += thiefMoney($totalOnGame=0,$cost=0, $win=50,$winCoff=1.33);
+        echo"Total money: $totalOnGame$";
+
     }else
     {
-        echo"Total money: ".thiefMoney($d4,$cost=0, $win=1,$winCoff)."$";
+
+        echo"Total money: $totalOnGame$";
+
     }
 
     //much more win position!!!need time=(

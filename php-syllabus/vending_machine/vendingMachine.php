@@ -134,3 +134,6 @@ if(intdiv($moneyCounter, 2)) {
 
 echo "$moneyCounter coins left".PHP_EOL;
 echo "<<<<<".($coins[0]->count).">>>>>";
+
+
+

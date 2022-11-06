@@ -4,4 +4,3 @@ for ($i=0;$i<5;$i++){
 }
 
 echo "Input number of terms:$num ";
-

@@ -1,6 +1,10 @@
 <?php
-for ($i=0;$i<5;$i++){
-    $num= $i*$i;
-}
 
-echo "Input number of terms:$num ";
+$first = 5;
+$second = 5;
+
+$pow = 1;
+for ($i = 1; $i <= $second; $i++) {
+    $pow *= $first;
+}
+echo "Input number of terms:$pow".PHP_EOL;

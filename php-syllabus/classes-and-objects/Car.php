@@ -5,6 +5,7 @@ class Car
     private FuelGauge $fuelGauge;
     private Odometer $odometer;
 
+
     public function __construct(
         FuelGauge $fuelGauge,
         Odometer $odometer
@@ -12,6 +13,7 @@ class Car
     {
         $this->fuelGauge = $fuelGauge;
         $this->odometer = $odometer;
+
     }
 
     public function drive(): void
@@ -31,4 +33,5 @@ class Car
     {
         return $this->odometer;
     }
+
 }

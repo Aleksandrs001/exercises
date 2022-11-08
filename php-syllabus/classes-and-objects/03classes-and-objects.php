@@ -5,7 +5,9 @@ require_once "car.php";
 
 $car= new Car(
     new FuelGauge(10),
-    new Odometer()
+    new Odometer(),
+
+
 );
 
 while ($car->getFuelGauge()->getAmount() > 0) {
@@ -14,5 +16,6 @@ while ($car->getFuelGauge()->getAmount() > 0) {
     echo "FuelGauge: {$car->getFuelGauge()->getAmount()} / Odometer: {$car->getOdometr()->getMileage()}";
     sleep(1);
     echo PHP_EOL;
+
 }
 

@@ -15,6 +15,7 @@ class FuelGauge
     }
 
     public function fill(int $fillAmount = 1): void
+
     {
         $maxAmount = 70;
         $newAmount = $this->amount + $fillAmount;

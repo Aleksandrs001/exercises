@@ -1,31 +1,33 @@
 <?php
 
-/**
-////////////////\\\\\\\\\\\\\\\\
-////////////********\\\\\\\\\\\\
-////////****************\\\\\\\\
-////************************\\\\
-********************************
-*/
-$zvaigznite= "*";
-$slash= '/';
-$slashOther='\\';
-//strlen();
-$x=0;
-$y=0;
-$firstFor=30;
-$counterZv=0;
 
-        for ($j = 0; $j <= 30; $j++) {
-        echo $slash;
-        sleep(1);
-            $firstFor.="a";
-            if($j==30){
-            for ($i = 0; $i <= strlen($firstFor); $i++) {
-                echo $zvaigznite;
-                sleep(2/3);
+class AsciiFigure
+{
+    public function start(): void
+    {
+        $select =(int) readline("Enter Number: ");
+        if(!$select==is_numeric(1))
+        {
+            exit("Not a number".PHP_EOL);
+        }
+        echo PHP_EOL;
+        $this->char($select);
+    }
 
-                }
-            }
-        }echo PHP_EOL;
+    public function char(int $size): void
+    {
+        $width = ($size - 1) * 4;
+
+        for ($i = 0; $i < $size; $i++)
+        {
+            echo str_repeat("/", $width - $i * 4);
+            echo str_repeat("*", 2 * $i * 4);
+            echo str_repeat("\\", $width - $i * 4);
+            echo PHP_EOL;
+        }
+    }
+}
+
+$start = new AsciiFigure();
+$start->start();
 

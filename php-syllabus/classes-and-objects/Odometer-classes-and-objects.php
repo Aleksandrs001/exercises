@@ -1,6 +1,5 @@
 <?php
 
-
 class Odometer
 {
     private int $mileage;

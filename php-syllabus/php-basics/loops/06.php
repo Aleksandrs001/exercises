@@ -3,6 +3,7 @@
 
 class AsciiFigure
 {
+    const CONSTANT =4;
     public function start(): void
     {
         $select =(int) readline("Enter Number: ");
@@ -20,9 +21,9 @@ class AsciiFigure
 
         for ($i = 0; $i < $size; $i++)
         {
-            echo str_repeat("/", $width - $i * 4);
-            echo str_repeat("*", 2 * $i * 4);
-            echo str_repeat("\\", $width - $i * 4);
+            echo str_repeat("/", $width - $i * self::CONSTANT);
+            echo str_repeat("*", 2 * $i * self::CONSTANT);
+            echo str_repeat("\\", $width - $i * self::CONSTANT);
             echo PHP_EOL;
         }
     }

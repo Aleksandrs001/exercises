@@ -1,7 +1,7 @@
 <?php
-require_once "Odometer.php";
-require_once "FuelGuage.php";
-require_once "car.php";
+require_once "Odometer-classes-and-objects.php";
+require_once "FuelGuage-classes-and-objects.php";
+require_once "Car-classes-and-objects.php";
 
 $car= new Car(
     new FuelGauge(10),

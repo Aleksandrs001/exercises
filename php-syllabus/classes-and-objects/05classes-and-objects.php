@@ -57,9 +57,7 @@ class Date
 }
 
 $dates = [
-    new Date(9, 12, 1986),
     new Date(5, 0, 2024),
-    new Date(4, 10, 2010),
 ];
 
 echo "Dates before editing:";
@@ -69,10 +67,10 @@ foreach ($dates as $date) {
 
 $dates[0]->setDay(31);
 echo "Set the day of the 1st date to {$dates[0]->getDay()}".PHP_EOL;
-$dates[1]->setMonth(12);
-echo "Set the month of the 2nd date to {$dates[1]->getMonth()}".PHP_EOL;
-$dates[2]->setYear(2023);
-echo "Set the year of the 3rd date to {$dates[2]->getYear()}".PHP_EOL;
+$dates[0]->setMonth(12);
+echo "Set the month of the 2nd date to {$dates[0]->getMonth()}".PHP_EOL;
+$dates[0]->setYear(2023);
+echo "Set the year of the 3rd date to {$dates[0]->getYear()}".PHP_EOL;
 echo "Dates after editing: ". PHP_EOL;
 foreach ($dates as $date) {
     echo $date->displayDate() . PHP_EOL;

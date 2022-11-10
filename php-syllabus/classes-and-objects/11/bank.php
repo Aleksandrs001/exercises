@@ -6,7 +6,7 @@ class Bank
     private Account $person2;
 
 
-                        //,
+
     public function __construct(Account  $person1, Account $person2)
     {
         $this->person1= $person1;

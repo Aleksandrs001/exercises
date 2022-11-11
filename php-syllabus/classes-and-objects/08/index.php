@@ -20,5 +20,5 @@ for($i = 1; $i <= $person->getMonths(); $i++) {
 echo "Total deposited: $" . number_format($person->getDeposited(), 2) . PHP_EOL;
 echo "Total withdrawn: $" . number_format($person->getWithdraw(), 2) . PHP_EOL;
 echo "Interest earned: $" . number_format($person->getEndBalance()
-        - ($person->getBalance() + $person->getDeposited() - $person->getWithdraw()), 2, ) .PHP_EOL;
+        - ($person->getBalance() + $person->getDeposited() - $person->getWithdraw()), 2 ) .PHP_EOL;
 echo "Ending balance: $" . number_format($person->getEndBalance(), 2).PHP_EOL;

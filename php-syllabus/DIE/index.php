@@ -52,7 +52,7 @@ if (($handle = fopen("vtmec-causes-of-death.csv", "r")) !== FALSE)
 
 }
 
-$select=(int) 4;//readline( "Choice type of dead: \n 1: Vardabiga nāve. \n 2: Nevardarbīga nāve. \n 3: Nāves cēlonis nav noteikts\n 4: Statistika.\n");
+$select=(int) readline( "Choice type of dead: \n 1: Vardabiga nāve. \n 2: Nevardarbīga nāve. \n 3: Nāves cēlonis nav noteikts\n ");
 
 if($select=== 1){
     $yearOfDead=(int) readline("Choice year of dead: ");

@@ -37,6 +37,5 @@ class CompanyProcessor
         return $this->limiter->process($this->csv);
     }
 
-
 }
 

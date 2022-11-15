@@ -40,4 +40,5 @@ if ($UserSelect === 1) {
         echo "reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
     }
 
+
 }

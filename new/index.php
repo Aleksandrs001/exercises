@@ -25,19 +25,20 @@ if ($UserSelect === 1) {
     $registrationCode = readline("Enter registration code: ");
     foreach ($companies as $company) {
         if ($company->getRegistrationCode() == $registrationCode) {
-            echo "reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
+            echo "[1] reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
         }
     }
 } else if ($UserSelect === 2) {
     $companyName = readline("Company name: ");
     foreach ($companies as $company) {
         if ($company->getName() == $companyName) {
-            echo "reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
+            echo "[1] reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
         }
     }
 } else if ($UserSelect === 3) {
-    foreach ($companies as $company) {
-        echo "reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
+    foreach ($companies as $key1=> $company) {
+        $key=$key1+1;
+        echo "[$key] reg.nr: {$company->getRegistrationCode()} | '{$company->getType()}' | '{$company->getName()}' | {$company->getTypeText()}." . PHP_EOL;
     }
 
 

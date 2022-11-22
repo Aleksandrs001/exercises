@@ -6,7 +6,7 @@ namespace App;
 
 class Weather
 {
-    public \stdClass $weatherData;
+    private \stdClass $weatherData;
 
     public function __construct(\stdClass $weatherData)
     {

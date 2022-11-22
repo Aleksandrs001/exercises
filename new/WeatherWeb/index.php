@@ -33,8 +33,9 @@ use App\Weather;
 
     ?>
 </div>
-<a class="text" href="/?cityName=Riga">| Riga</a> | <a href="/?cityName=Vilnius">Vilnius</a> | <a
-        href="/?cityName=Tallinn">Tallinn</a> |
+<a class="text" href="/?cityName=Riga">| Riga</a>
+| <a href="/?cityName=Vilnius">Vilnius</a> |
+    <a href="/?cityName=Tallinn">Tallinn</a> |
 
 <form class="form" method="get">
     <label>

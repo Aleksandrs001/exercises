@@ -9,7 +9,7 @@ use Dotenv;
 class ApiProcessor
 {
 
-    public $weatherData;
+    private \stdClass $weatherData;
 
     public function __construct($cityName)
     {

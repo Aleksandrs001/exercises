@@ -24,21 +24,19 @@ use App\Weather;
     <p class="title"
     <?php
 
-    $cityName = $_GET['cityName'] ?? "Riga";
-    $apiProcessor = new ApiProcessor($cityName);
+    $apiProcessor = new ApiProcessor($_GET['cityName'] ?? "Riga");
     $cityInfo = new Weather($apiProcessor->getWeatherData());
-    echo "<br>In {$cityInfo->getName()} now:  {$cityInfo->getTemp()}c degree.";
+    echo "<br><br>In {$cityInfo->getName()} now:  {$cityInfo->getTemp()}c degree.";
     echo "<br>MaxTemp will be: {$cityInfo->getMaxTemp()}c, MinTemp will be: {$cityInfo->getMinTemp()}c.
 <br>Humidity level: {$cityInfo->getHumidity()}% <br>Presure: {$cityInfo->getPressure()}hPa";
-    $icon = $cityInfo->getIcon() . ".png";
-    echo "<img src='app/icons/$icon' alt='app/icons/unknown.png'/>";
+    echo("<img src='https://openweathermap.org/img/wn/" . $cityInfo->getIcon() . "@2x.png'>");
 
     ?>
 </div>
-| <a href="/?cityName=Riga">Riga</a> | <a href="/?cityName=Vilnius">Vilnius</a> | <a
+<a class="text" href="/?cityName=Riga">| Riga</a> | <a href="/?cityName=Vilnius">Vilnius</a> | <a
         href="/?cityName=Tallinn">Tallinn</a> |
 
-<form method="get">
+<form class="form" method="get">
     <label>
         <input type="text" name="cityName" value="" placeholder="Search city:">
     </label>

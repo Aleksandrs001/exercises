@@ -56,4 +56,3 @@ class Weather
         return $this->weatherData->weather[0]->icon;
     }
 }
-

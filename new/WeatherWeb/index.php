@@ -10,6 +10,7 @@ use App\Weather;
 
 $apiProcessor = new ApiProcessor($_GET['cityName'] ?? "Riga");
 $cityInfo = new Weather($apiProcessor->getWeatherData());
+
 ?>
 <!doctype html>
 <html lang="en">

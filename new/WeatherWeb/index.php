@@ -28,7 +28,7 @@ use App\Weather;
     $cityInfo = new Weather($apiProcessor->getWeatherData());
     echo "<br><br>In {$cityInfo->getName()} now:  {$cityInfo->getTemp()}c degree.";
     echo "<br>MaxTemp will be: {$cityInfo->getMaxTemp()}c, MinTemp will be: {$cityInfo->getMinTemp()}c.
-<br>Humidity level: {$cityInfo->getHumidity()}% <br>Presure: {$cityInfo->getPressure()}hPa";
+<br>Humidity level: {$cityInfo->getHumidity()}% <br>Presure: {$cityInfo->getPressure()}hPa <br> ";
     echo("<img src='https://openweathermap.org/img/wn/" . $cityInfo->getIcon() . "@2x.png'>");
 
     ?>

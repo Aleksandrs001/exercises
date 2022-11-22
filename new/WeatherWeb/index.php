@@ -8,6 +8,8 @@ use App\ApiProcessor;
 use App\Weather;
 
 
+$apiProcessor = new ApiProcessor($_GET['cityName'] ?? "Riga");
+$cityInfo = new Weather($apiProcessor->getWeatherData());
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,8 +26,6 @@ use App\Weather;
     <p class="title"
     <?php
 
-    $apiProcessor = new ApiProcessor($_GET['cityName'] ?? "Riga");
-    $cityInfo = new Weather($apiProcessor->getWeatherData());
     echo "<br><br>In {$cityInfo->getName()} now:  {$cityInfo->getTemp()}c degree.";
     echo "<br>MaxTemp will be: {$cityInfo->getMaxTemp()}c, MinTemp will be: {$cityInfo->getMinTemp()}c.
 <br>Humidity level: {$cityInfo->getHumidity()}% <br>Presure: {$cityInfo->getPressure()}hPa <br> ";
@@ -35,7 +35,7 @@ use App\Weather;
 </div>
 <a class="text" href="/?cityName=Riga">| Riga</a>
 | <a href="/?cityName=Vilnius">Vilnius</a> |
-    <a href="/?cityName=Tallinn">Tallinn</a> |
+<a href="/?cityName=Tallinn">Tallinn</a> |
 
 <form class="form" method="get">
     <label>

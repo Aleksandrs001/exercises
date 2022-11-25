@@ -1,0 +1,23 @@
+.box{
+    width:210px;
+    height: 225px;
+    background-image: url("tree.jpeg");
+    background-size: initial;
+}
+.title{
+
+    margin-left: 5px;
+   text-align: center;
+
+    size: 6px;
+    color: azure;
+}
+.form{
+    margin-left: 21px;
+}
+.text{
+    margin-left: 20px;
+}
+.icon{
+    text-align: center;
+}

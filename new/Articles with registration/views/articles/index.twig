@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../public/styles.css">
+    <title>Hot News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <h1 class="header"> HOT NEWS</h1>
+
+
+</head>
+<body>
+<form class="search" action="/" method="get">
+    <label>
+        <input type="text" placeholder="search..." name="search">
+    </label>
+    <button type="submit">Search</button>
+</form>
+
+<div class="flag">
+    <a id="bbb" href="https://war.ukraine.ua/donate/"
+       target="_blank"> <img id="top" src=" ../../public/pictures/ukr2.jpeg"
+                             alt="_blanc" width="200"/>
+    </a>
+</div>
+
+
+<form class="register" action="/registration" method="get">
+
+    <button type="submit">Register now</button>
+</form>
+
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+        {% for article in articles %}
+
+            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                <article class="overflow-hidden rounded-lg shadow-lg">
+
+                    <a href="{{ article.picture }}" target="_blank">
+                        <img alt="Placeholder" class="block h-auto w-full" src="{{ article.picture }}">
+                    </a>
+
+                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                        <h1 class="text-lg">
+                            <a class="no-underline hover:underline text-black" href="{{ article.url }}" target="_blank">
+                                {{ article.title }}
+                            </a>
+                        </h1>
+                        <p class="text-grey-darker text-sm">
+                        </p>
+                    </header>
+                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                        {{ article.publishedAt }}
+                    </footer>
+                </article>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

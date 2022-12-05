@@ -1,0 +1,62 @@
+
+body {
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.flag {
+    size: 30px;
+}
+
+#top {
+
+
+}
+
+#bbb {
+    inline-size: 50px;
+}
+
+.search {
+    size: 50px;
+    margin-left: 45%;
+
+}
+
+.box {
+    width: 100%;
+}
+
+
+.header {
+
+    font-size: 80px;
+    text-align: center;
+    color: #940303;
+    font-family: Kokonor, cursive;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+a:active {
+    color: #272365;
+}
+
+a:visited {
+    color: #1a2c9f;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+.register {
+    margin-left: 500px;
+    margin-bottom: 100px;
+}
